@@ -9,24 +9,8 @@ class Roman(IntEnum):
     D = 500
     M = 1000
 
-class romantoint:
+class Solution:
     def convert(s:str):
-        length = len(s)
-        if length == 1:
-            return Roman[s].value
-        value = 0
-        i=0
-        while i<length:
-            letter_val = Roman[s[i]].value
-            value +=letter_val
-            i +=1
-            if i>=length:break
-            next_letter_val = Roman[s[i]].value
-            if letter_val < next_letter_val:
-                value += next_letter_val - 2*letter_val
-                i +=1
-        return value
-    def convert2(s:str):
         length = len(s)
         value = i = letter_val = 0
 
